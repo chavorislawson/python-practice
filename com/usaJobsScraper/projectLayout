@@ -1,0 +1,67 @@
+# USAJobs.gov Job Scraper Software Requirements Specification
+
+In the future Make it better, maybe I want to use it for any job related API and then make it flexible and scalable to use any type of data from JSON to HTML.
+
+## **1. Introduction**
+
+### **1.1 Purpose**
+
+The purpose of this document is to build an application to display a ranking of jobs available and skills needed for those jobs from USAJobs.gov
+
+---
+
+### **1.2 Document Conventions**
+
+Not sure yet. Come back and update
+
+### **1.3 Intended Audience and Reading Suggestions**
+
+This project is useful for anyone wanting to see jobs available and the skills needed for those jobs for USAJobs.gov
+
+### **1.4 Project Scope**
+
+What does it do in detail and what you hope to accomplish
+
+The purpose of this application to display a ranking of jobs available and skills needed for those jobs from USAJobs.gov and provide an interactive application for job seekers on USAJobs.gov. Ranking to be displayed will be all software engineering related jobs on USAJobs.gov by title, most common, least common, on the rise, going obsolete, by skills needed, and by domain (data science, back-end, etc.), by relevant skills needed for the job, rank all the skills that appear by most common, least common, on the rise, going obsolete, domain specific (data science, backend engineer, etc.), by type (programming languages, frameworks, etc.),and by job title. 
+
+This will give a job seeker access to all important information needed for potential skill learning needed to get a job or enter a certain domain, know what jobs, domains, and skills are common, uncommon, on the rise, and going obsolete, as well as know the jobs, or domains they may qualify for.
+
+### **1.5 References**
+
+[USAJob.gov Developer Site]()
+
+[USAJobs.gov list of API]('https://developer.usajobs.gov/Tutorials/Code-List')
+
+[USAjobs.gov API to get job titles and skills]('https://data.usajobs.gov/api/codelist/occupationalseries')
+
+## ***2. Overall Description**
+
+### ***2.1 Product Perspective
+
+## Technical Overview
+
+Use the USAJobs.gov API to return all job details in a JSON format. Store the JSON objects in a NOSQL database (MongoDB). Parse through the database to get the relevant information want in the overview using Python, PyMongo, Pandas, Statsmodel, Numpy, Matplotlib, Seaborn, and Django.
+
+The application uses a NOSQL database to store JSON objects for later querying. It uses Django for website hosting and development?
+
+Python - for the interaction between the various libraries? Good question.
+
+PyMongo - to interact with the MongoDB Databse
+
+Pandas - ? Don't know
+
+Statsmodel - to statistically the data in statistical models?
+
+Numpy - ?
+
+Matplotlib - for visualizations
+
+Seaborn - for interactive visualizatons
+
+Django - for web development and displaying of the data
+
+## User Story
+
+As a
+I want to
+So that
