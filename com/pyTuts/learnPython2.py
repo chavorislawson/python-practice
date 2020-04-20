@@ -1,4 +1,4 @@
-from com.pyTuts.learnPython import JobPortal as jp
+from learnPython import JobPortal as lp #this will faill if the other class has an error
 # year = 2020
 # event = 'Covid-19'
 # print(f'The year {year} will be most remembered for {event}') #f strings, formatted
@@ -12,4 +12,4 @@ from com.pyTuts.learnPython import JobPortal as jp
 # with open('numbers.txt') as n:
 #     print(n.read())
 
-jp.findJob("Chavoris","python","java")
+lp.findJob("Chavoris","python","java")

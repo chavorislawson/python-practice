@@ -38,6 +38,20 @@ This will give a job seeker access to all important information needed for poten
 
 ### ***2.1 Product Perspective
 
+What's the difference between this and the project scope?
+
+Maybe draw a diagram at this point. This explains how everything works together at a system level.
+
+The application requires an internet connection to contact the API for the job and skill related information stored in a JSON format. It also, requires connection to a NOSQL database, in this case MongoDB, to easily store the JSON data constantly as the application receives more information from the API and to also pull information from the db to display the results on the website. The application will be hosted on a webserver (need more information on how all that actually works)
+
+### ***2.2 Product Features (possibly functions)***
+
+The major features of the application are 
+
+### ***2.3 User Class and Characteristics***
+
+Users of the application should be able to see an updated display which is determined on the quality of the API, as well as the quality of the applications ability to quickly retrieve the JSON from the API, store the JSON, query the JSON for the different options, and display them. The system will only be used by end users such as job seekers and those interested in learning the skills and jobs available related to the software engineering profession.
+
 ## Technical Overview
 
 Use the USAJobs.gov API to return all job details in a JSON format. Store the JSON objects in a NOSQL database (MongoDB). Parse through the database to get the relevant information want in the overview using Python, PyMongo, Pandas, Statsmodel, Numpy, Matplotlib, Seaborn, and Django.

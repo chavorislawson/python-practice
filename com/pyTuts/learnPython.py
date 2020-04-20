@@ -6,23 +6,26 @@
 class JobPortal:
 
     def __init__(self):
-        super().__init__()
+        #super().__init__() Idk what this does
+        self.usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario']
+        self.usernames = [x.upper() for x in self.usernames] #can you not have variables outside of init? This is very unlike java
 
-    db = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario']
-    db = [x.upper() for x in db]
+    # if 'Chavoris'.upper() in usernames:
+    #     print(usernames.__len__())
 
-    # if 'Chavoris'.upper() in db:
-    #     print(db.__len__())
 
-    def findJob(self, name='Chavoris', *skills, jobDescrip=("Python","java")):
-        name = input("Enter your usename:")
 
-        while (not self.db.(name)) or (type(name) != str):
-            name = input("Enter a valid usename:")
+    def findJob(self, name, *skills, jobDescrip=("Python","java")): #why is self being used as if it were a keyword argument
+        usernameAttempt = input("Enter your usename:") #going to cast this in the other function
+
+        usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario'] #See how to reference this from inside the class
+        print(self)
+        while (not usernames.__contains__(usernameAttempt)) or (type(name) != str): #I'm supposed to reference class items by self, but this function acts stupid if I do.
+            usernameAttempt = input("Enter a valid usename:")
 
         print('You are now successfully logged in.')
 
-        while not jobDescrip.__contains__(skills[0]) or jobDescrip.__contains__(skills[1]):
+        while not jobDescrip.__contains__(skills[0]):# or jobDescrip.__contains__(skills[1]
 
             response = print("Your skills did not match. Would you like to try again?")
 
@@ -30,7 +33,7 @@ class JobPortal:
                 keywords = input("Enter a valid skill:")
 
             else:
-                print("Your skills don't match the minimal job requirements. GoodBye.")
+                print("Your skills don't match the minimal job requirements. Goodbye.")
                 exit(code=0)
 
         print("Your skills match the minimal job requirements. You will be selected for an interview soon. Goodbye.")
@@ -42,7 +45,7 @@ class JobPortal:
 # def findJob2(name='Chavoris', *keywords, **jobDescrip):
 #         name = str(input("Enter your usename:"))
 
-#         while not db.__contains__(name):
+#         while not usernames.__contains__(name):
 #             name = input("Enter a valid usename:")
 
 #         print('You are now successfully logged in.')
@@ -70,13 +73,13 @@ class JobPortal:
 
 # len, sum, range, list, input, int, str, in, _ <- don't know if can be used out of the interactive shell
 
-# print('Are you in the db? Let\'s see!')
+# print('Are you in the usernames? Let\'s see!')
 # name = input('What\'s your name?')
 
 # name = name.upper()
 # print(name)
-# for i in range(len(db)):
-#     if db[i] != name:
+# for i in range(len(usernames)):
+#     if usernames[i] != name:
 #         continue
 #     else:
 #         print('Success!')
@@ -118,22 +121,22 @@ class JobPortal:
 
 # print(tuple(list(square)))
 
-# db2 = dict("Chavo's Contacts",(dict("Number",678899463),dict("Address",2309)))
-# db3 = dict("Chavo's Contacts":67687878)
-# db4 = {"ty":566767}
-# db5 = {"Chavo's Contacts": ({"Number":678899463},{"Address":2309})}
-# print(db2,db3,db4)
-# print(db4, db5)
-# print(db5["Chavo's Contacts"][0]["Number"])  # Fye, but tedious
+# usernames2 = dict("Chavo's Contacts",(dict("Number",678899463),dict("Address",2309)))
+# usernames3 = dict("Chavo's Contacts":67687878)
+# usernames4 = {"ty":566767}
+# usernames5 = {"Chavo's Contacts": ({"Number":678899463},{"Address":2309})}
+# print(usernames2,usernames3,usernames4)
+# print(usernames4, usernames5)
+# print(usernames5["Chavo's Contacts"][0]["Number"])  # Fye, but tedious
 
-# db6 = ({"Name": "Chavoris"},{"Contact":6787899463},{"Address":2309}),({"Name":"Destiny"},{"Contact":6787899462},{"Address":2308})
-# print(db6)
-# print(type(db6))
-# print(db6[1][1]["Contact"])
+# usernames6 = ({"Name": "Chavoris"},{"Contact":6787899463},{"Address":2309}),({"Name":"Destiny"},{"Contact":6787899462},{"Address":2308})
+# print(usernames6)
+# print(type(usernames6))
+# print(usernames6[1][1]["Contact"])
 
-# print([[[[x[i][j] for x in range(len(db6))]for i in range(len(db6[i]))]for j in range(len(db6[i][j]))]])
-# print([[x[i] for x in range(len(db6))]for i in range(len(db6[]))])
-# print([x for x in range(len(db6))])
+# print([[[[x[i][j] for x in range(len(usernames6))]for i in range(len(usernames6[i]))]for j in range(len(usernames6[i][j]))]])
+# print([[x[i] for x in range(len(usernames6))]for i in range(len(usernames6[]))])
+# print([x for x in range(len(usernames6))])
 
 # if __name__ == "__main__":  # Makes this module a script to be run in the command line
 #     import sys
