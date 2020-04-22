@@ -12,4 +12,4 @@ from learnPython import JobPortal as lp #this will faill if the other class has 
 # with open('numbers.txt') as n:
 #     print(n.read())
 
-lp.findJob("Chavoris","python","java")
+lp.findJob(name = "Chavoris","python","c-sharp","java")

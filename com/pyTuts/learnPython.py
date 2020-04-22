@@ -20,11 +20,12 @@ class JobPortal:
 
         usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario'] #See how to reference this from inside the class
         print(self)
-        while (not usernames.__contains__(usernameAttempt)) or (type(name) != str): #I'm supposed to reference class items by self, but this function acts stupid if I do.
+        while (not usernames.__contains__(usernameAttempt)) or (type(usernameAttempt) != str): #I'm supposed to reference class items by self, but this function acts stupid if I do.
             usernameAttempt = input("Enter a valid usename:")
 
         print('You are now successfully logged in.')
-
+        print(skills)
+        print(jobDescrip)
         while not jobDescrip.__contains__(skills[0]):# or jobDescrip.__contains__(skills[1]
 
             response = print("Your skills did not match. Would you like to try again?")
