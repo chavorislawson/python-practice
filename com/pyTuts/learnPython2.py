@@ -11,5 +11,17 @@ from learnPython import JobPortal as lp #this will faill if the other class has 
 
 # with open('numbers.txt') as n:
 #     print(n.read())
+class learnPython2:
+    #def __init__(self):
+        #super().__init__()
+    
+    def findJob(self, name):
+        usernameattempt = input("Enter a username:")
+        if(usernameattempt.__eq__(name)):
+            print(self)
+            print(name)
+            print("Congrats")
 
-lp.findJob(name = "Chavoris","python","c-sharp","java")
+#lp.findJob(name = "Chavoris","python","c-sharp","java")
+lp = learnPython2()
+lp.findJob("Chavoris")# I think one of the issues I was running into with the other program is related to kwargs.
