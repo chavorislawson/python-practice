@@ -5,39 +5,43 @@
 
 class JobPortal:
 
-    def __init__(self):
-        #super().__init__() Idk what this does
-        self.usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario']
-        self.usernames = [x.upper() for x in self.usernames] #can you not have variables outside of init? This is very unlike java
+    # def __init__(self):
+    #     #super().__init__() Idk what this does
+    #     self.usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario']
+    #     self.usernames = [x.upper() for x in self.usernames] #can you not have variables outside of init? This is very unlike java
 
     # if 'Chavoris'.upper() in usernames:
     #     print(usernames.__len__())
 
 
 
-    def findJob(self, name, *skills, jobDescrip=("Python","java")): #why is self being used as if it were a keyword argument
-        usernameAttempt = input("Enter your usename:") #going to cast this in the other function
+    def findJob(self, name, *usernamesj, **jobDescrip): #why is self being used as if it were a keyword argument
+        usernameAttempt = name #input("Enter your usename:") #going to cast this in the other function
 
-        usernames = ['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario'] #See how to reference this from inside the class
+        usernames = usernamesj#['Chavoris', 'John', 'Sarah', 'Hancock', 'Mario'] #See how to reference this from inside the class
         print(self)
+        print(name)
+        print(usernamesj)
+        print(jobDescrip)
+
         while (not usernames.__contains__(usernameAttempt)) or (type(usernameAttempt) != str): #I'm supposed to reference class items by self, but this function acts stupid if I do.
             usernameAttempt = input("Enter a valid usename:")
 
         print('You are now successfully logged in.')
-        print(skills)
+        print(usernamesj)
         print(jobDescrip)
-        while not jobDescrip.__contains__(skills[0]):# or jobDescrip.__contains__(skills[1]
+        while not jobDescrip.__contains__(usernamesj[0]):# or jobDescrip.__contains__(usernamesj[1]
 
-            response = print("Your skills did not match. Would you like to try again?")
+            response = print("Your usernamesj did not match. Would you like to try again?")
 
             if(response.__eq__("YES") or response.__eq__("yes") or response.__eq__("Yes") or response.__eq__("y") or response.__eq__("Y")): # going to learn about regular expressions for this
                 keywords = input("Enter a valid skill:")
 
             else:
-                print("Your skills don't match the minimal job requirements. Goodbye.")
+                print("Your usernamesj don't match the minimal job requirements. Goodbye.")
                 exit(code=0)
 
-        print("Your skills match the minimal job requirements. You will be selected for an interview soon. Goodbye.")
+        print("Your usernamesj match the minimal job requirements. You will be selected for an interview soon. Goodbye.")
         exit(code=0)
     
     
@@ -53,13 +57,13 @@ class JobPortal:
 
 #         while not jobDescrip.__contains__(keywords[0]):
 
-#             response = str(print("Your skills did not match. Would you like to try again?"))
+#             response = str(print("Your usernamesj did not match. Would you like to try again?"))
 
 #             if(response.lower().__eq__("yes")):
 
 #             if jobDescrip.__contains__(keywords[0]):
 #                 print(
-#                     "Your skills match the minimal job requirements. You will be selected for an interview soon.")
+#                     "Your usernamesj match the minimal job requirements. You will be selected for an interview soon.")
 #                 exit(code=0)
 #             else:
 

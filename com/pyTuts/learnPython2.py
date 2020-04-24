@@ -1,4 +1,6 @@
-from learnPython import JobPortal as lp #this will faill if the other class has an error
+# this will fail if the other class has an error
+#from learnPython import JobPortal as lp
+from learnPython.JobPortal import findJob as fj
 # year = 2020
 # event = 'Covid-19'
 # print(f'The year {year} will be most remembered for {event}') #f strings, formatted
@@ -12,17 +14,22 @@ from learnPython import JobPortal as lp #this will faill if the other class has 
 # with open('numbers.txt') as n:
 #     print(n.read())
 class learnPython2:
-    #def __init__(self):
-        #super().__init__()
-    
-    def findJob(self, *name):
-        usernameattempt = input("Enter a username:")
-        db = ["Chavoris","John","Cole"]
+    # def __init__(self):
+        # super().__init__()
+
+    def findJob(self, name, *names, **namey):# I think the self issue has to do with importing
+        usernameattempt = name  # input("Enter a username:")
+        db = names  # ["Chavoris","John","Cole"]
+        print(self)
+        print(name)
+        print(names)
+        print(namey)
         if(db.__contains__(usernameattempt)):
-            print(self)
-            print(name)
+
             print("Congrats")
 
-#lp.findJob(name = "Chavoris","python","c-sharp","java")
-lp = learnPython2()
-lp.findJob("Chavoris","John","Cole")# I think one of the issues I was running into with the other program is related to kwargs.
+
+fJ("Chavoris","Chavoris","John","Bob",n = "Chavoris",a = "John")
+#lp = learnPython2()
+# I think one of the issues I was running into with the other program is related to kwargs.
+#lp.findJob("Chavoris", "John", "Cole", n="hello", a="wholesome")
