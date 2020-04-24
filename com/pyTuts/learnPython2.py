@@ -15,13 +15,14 @@ class learnPython2:
     #def __init__(self):
         #super().__init__()
     
-    def findJob(self, name):
+    def findJob(self, *name):
         usernameattempt = input("Enter a username:")
-        if(usernameattempt.__eq__(name)):
+        db = ["Chavoris","John","Cole"]
+        if(db.__contains__(usernameattempt)):
             print(self)
             print(name)
             print("Congrats")
 
 #lp.findJob(name = "Chavoris","python","c-sharp","java")
 lp = learnPython2()
-lp.findJob("Chavoris")# I think one of the issues I was running into with the other program is related to kwargs.
+lp.findJob("Chavoris","John","Cole")# I think one of the issues I was running into with the other program is related to kwargs.
