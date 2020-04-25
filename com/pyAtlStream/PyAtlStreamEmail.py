@@ -13,8 +13,8 @@ import csv
 #     next(reader)
 #     for name,
 
-sender_email = "chavoris.lawson.jobs@gmail.com"
-receiver_email = "chavoris.lawson.jobs@gmail.com"
+sender_email = "" #an email address, I used gmail
+receiver_email = ""# same email as above
 password = input("Type password and press enter:")
 
 message = MIMEMultipart("alternative")

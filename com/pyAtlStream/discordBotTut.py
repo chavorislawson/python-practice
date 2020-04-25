@@ -24,7 +24,7 @@ async def on_message(message):
     if message.content.startswith("$hello"):#message can be changed to anything
         await message.channel.send("Hello!")# can do multiple awaits to do multi line
 
-client.run("NzAzMzkxNDYwNDQ3MzU0OTAz.XqOQ7w.msn5yOvJGSmBwSWTu4rQP5TySm0")# actual stuff
+client.run("")# don't send token over internet
 
 #go to developer portal, application you made, go to bot, click to reveal token
 #that's the token you use
