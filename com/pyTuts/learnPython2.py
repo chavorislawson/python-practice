@@ -1,6 +1,6 @@
 # this will fail if the other class has an error
 #from learnPython import JobPortal as lp
-from learnPython.JobPortal import findJob as fj
+#from learnPython.JobPortal import findJob as fj
 # year = 2020
 # event = 'Covid-19'
 # print(f'The year {year} will be most remembered for {event}') #f strings, formatted
@@ -29,7 +29,16 @@ class learnPython2:
             print("Congrats")
 
 
-fJ("Chavoris","Chavoris","John","Bob",n = "Chavoris",a = "John")
+#fJ("Chavoris","Chavoris","John","Bob",n = "Chavoris",a = "John")
 #lp = learnPython2()
 # I think one of the issues I was running into with the other program is related to kwargs.
 #lp.findJob("Chavoris", "John", "Cole", n="hello", a="wholesome")
+
+
+#generator example
+def jobIter(**jobs):
+    for n in jobs:
+        yield jobs[n]
+
+for d in jobIter(software = "python", job = "slave"):
+    print(d)
