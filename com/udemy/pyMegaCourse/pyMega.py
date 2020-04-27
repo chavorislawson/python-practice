@@ -1,10 +1,17 @@
 def repeat():
     db =[]
-    string = input("Say somethng:")
-    while((string.__ne__("\end")):
-        db.append(string.title)
+    string = input("Say something:")
+    while(string.__ne__("\end")):
+        string = string.capitalize().strip()
+        if string.startswith(("How","What","Why", "Is","Are","Can","May")):
+            string = string.__add__("?")
+        else:
+            string = string.__add__(".")
 
-    for i in db:
-        print(i+", ")
+        db.append(string)
+        string = input("Say something:")
+    
+    for i in range(len(db)):
+        print(db[i],end=" ")
 
 repeat()
