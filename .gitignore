@@ -1,3 +1,6 @@
-.vscode/launch.json
 __pycache__
 .pydevproject
+.idea
+.vscode/
+./pydevproject
+Practice.iml
